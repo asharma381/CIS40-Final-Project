@@ -13,6 +13,8 @@
 		48CAFA8324BCFDFE00E1689A /* Daily.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48CAFA8224BCFDFE00E1689A /* Daily.cpp */; };
 		48CAFA8624BCFE0D00E1689A /* Weekly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48CAFA8524BCFE0D00E1689A /* Weekly.cpp */; };
 		48CAFA8924BCFE1F00E1689A /* Monthly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48CAFA8824BCFE1F00E1689A /* Monthly.cpp */; };
+		48CAFA8C24BD0C1C00E1689A /* Time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48CAFA8B24BD0C1C00E1689A /* Time.cpp */; };
+		48CAFA8F24BD0C5500E1689A /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 48CAFA8E24BD0C5500E1689A /* Date.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,10 @@
 		48CAFA8524BCFE0D00E1689A /* Weekly.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Weekly.cpp; sourceTree = "<group>"; };
 		48CAFA8724BCFE1500E1689A /* Monthly.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monthly.h; sourceTree = "<group>"; };
 		48CAFA8824BCFE1F00E1689A /* Monthly.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Monthly.cpp; sourceTree = "<group>"; };
+		48CAFA8A24BD0C1100E1689A /* Time.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Time.h; sourceTree = "<group>"; };
+		48CAFA8B24BD0C1C00E1689A /* Time.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Time.cpp; sourceTree = "<group>"; };
+		48CAFA8D24BD0C2900E1689A /* Date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		48CAFA8E24BD0C5500E1689A /* Date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,10 @@
 				48CAFA8524BCFE0D00E1689A /* Weekly.cpp */,
 				48CAFA8724BCFE1500E1689A /* Monthly.h */,
 				48CAFA8824BCFE1F00E1689A /* Monthly.cpp */,
+				48CAFA8A24BD0C1100E1689A /* Time.h */,
+				48CAFA8B24BD0C1C00E1689A /* Time.cpp */,
+				48CAFA8D24BD0C2900E1689A /* Date.h */,
+				48CAFA8E24BD0C5500E1689A /* Date.cpp */,
 			);
 			path = "CIS40 Final Project";
 			sourceTree = "<group>";
@@ -149,7 +159,9 @@
 				48CAFA8624BCFE0D00E1689A /* Weekly.cpp in Sources */,
 				48CAFA7524BC425600E1689A /* main.cpp in Sources */,
 				48CAFA7D24BCFDD000E1689A /* Appointment.cpp in Sources */,
+				48CAFA8C24BD0C1C00E1689A /* Time.cpp in Sources */,
 				48CAFA8924BCFE1F00E1689A /* Monthly.cpp in Sources */,
+				48CAFA8F24BD0C5500E1689A /* Date.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
