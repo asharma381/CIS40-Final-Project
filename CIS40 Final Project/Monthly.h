@@ -1,14 +1,13 @@
 //
-//  main.cpp
+//  Monthly.h
 //  CIS40 Final Project
 //
 //  Created by Aditya Sharma on 7/13/20.
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <iostream>
+#ifndef Monthly_h
+#define Monthly_h
 
-int main() {
-    
-    return 0;
-}
+
+#endif /* Monthly_h */

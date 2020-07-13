@@ -1,14 +1,13 @@
 //
-//  main.cpp
+//  Onetime.h
 //  CIS40 Final Project
 //
 //  Created by Aditya Sharma on 7/13/20.
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <iostream>
+#ifndef Onetime_h
+#define Onetime_h
 
-int main() {
-    
-    return 0;
-}
+
+#endif /* Onetime_h */
