@@ -6,4 +6,14 @@
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+#include "Monthly.h"
+
+//************************************************************
+// Override occurs_on Function: Returns true if the day of   *
+// the week is the same as appointment date.                 *
+//************************************************************
+bool Monthly::occurs_on (int m, int d, int y){
+    return day == d;
+    
+}

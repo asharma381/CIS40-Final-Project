@@ -6,4 +6,10 @@
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+#include "Onetime.h"
+
+bool Onetime::occurs_on(int m, int d, int y)
+{
+    return date.equals(Date(m,d,y));
+}
