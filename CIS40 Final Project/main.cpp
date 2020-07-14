@@ -16,7 +16,6 @@ int main() {
     Time t2(10,5,0);
     
     Appointment b("a", t1, t2);
-    Appointment brush("Brush my Teeth", Time(10,0,0), Time(10,5,0));
-    brush.print();
+    b.print();
     return 0;
 }
