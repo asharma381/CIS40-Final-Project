@@ -27,6 +27,14 @@ public:
         minute = min;
         second = sec;
     }
+    
+    // Copy Constructor
+    Time(const Time &t)
+    {
+        hour = t.hour;
+        minute = t.minute;
+        second = t.second;
+    }
 
     // Accessor Member Functions
     int getHour() { return hour; }

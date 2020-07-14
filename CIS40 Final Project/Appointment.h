@@ -19,29 +19,25 @@ class Appointment
 {
 private:
     string description;    // Member variable holds the description
-    Time *start;
-    Time *end;
+    Time start;
+    Time end;
 public:
     // Default Constructor
-    Appointment(){
-        Appointment("", Time(0,0,0), Time(0,0,0));
+    Appointment() : start(Time(0,0,0)), end(Time(0,0,0)){
+        description = "";
     }
     
     // Constructor
-    Appointment(string des, Time s, Time e){
+    Appointment(string des, Time s, Time e) : start(s), end(e)
+    {
         description = des;
-        Time st(s.getHour(), s.getMinute(), s.getSecond());
-        start = &st;
-        
-        Time en(e.getHour(), e.getMinute(), e.getSecond());
-        end = &en;
     }
     
     // Print Member Function
     void print();
     
     // Virtual Function
-    virtual bool occurs_on(int, int, int);
+//    virtual bool occurs_on(int, int, int);
 };
 
 

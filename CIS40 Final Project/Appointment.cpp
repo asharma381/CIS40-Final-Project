@@ -14,9 +14,8 @@
 //************************************************************
 void Appointment::print()
 {
-    cout << "Appointment from ";
-    start->print();
+    start.print();
     cout << " to ";
-    end->print();
-    cout << endl;
+    end.print();
+    cout << " - " << description << endl;
 }
