@@ -38,6 +38,8 @@ public:
     
     // Print Function
     void print();
+    
+    bool operator == (const Date &);        // Overloaded ==
 };
 
 #endif /* Date_h */

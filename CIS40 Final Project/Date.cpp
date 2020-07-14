@@ -25,3 +25,21 @@ void Date::print()
 {
     cout << getMonth() << "/" << getDay() << "/" << getYear() << endl;
 }
+
+
+//*************************************************************
+// Overloaded == operator. Returns true if the current object *
+// is set to a value equal to that of right.                  *
+//*************************************************************
+
+bool Date::operator == (const Date &right)
+{
+    bool status;
+
+    if (month == right.month && day == right.day && year == right.year)
+        status = true;
+    else
+        status = false;
+
+    return status;
+}

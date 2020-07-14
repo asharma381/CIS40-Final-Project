@@ -37,7 +37,7 @@ public:
     void print();
     
     // Virtual Function
-    virtual bool occurs_on(int, int, int);
+    virtual bool occurs_on(int, int, int) = 0;
 };
 
 

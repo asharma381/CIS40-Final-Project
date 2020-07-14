@@ -10,7 +10,6 @@
 #define Daily_h
 #include "Appointment.h"
 #include "Time.h"
-#include <string>
 
 class Daily: public Appointment
 {
@@ -21,7 +20,9 @@ public:
     }
     
     // Constructor
-    Daily(string des, Time s, Time e): Appointment(des, s, e){ }
+    Daily(string des, Time s, Time e): Appointment(des, s, e){
+        
+    }
     
     bool occurs_on(int, int, int) override;
 

@@ -13,7 +13,7 @@
 // Override occurs_on Function: Returns true since each day  *
 // there is an appointment.                                  *
 //************************************************************
-bool Appointment::occurs_on(int month, int day, int year)
+bool Daily::occurs_on (int m, int d, int y)
 {
     return true;
 }

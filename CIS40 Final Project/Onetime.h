@@ -20,7 +20,7 @@ private:
     Date date;
     
 public:
-    Onetime(string des, Time s, Time e, Date d) : Appointment(des, s, e), date(d) {}
+    Onetime(string des, Date d, Time s, Time e) : Appointment(des, s, e), date(d) {}
     
     bool occurs_on(int, int, int) override;
 };

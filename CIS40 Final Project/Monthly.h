@@ -20,7 +20,7 @@ private:
 public:
     Monthly() : Appointment() { }
     
-    Monthly(string des, Time s, Time e, int d) : Appointment(des, s, e)
+    Monthly(string des, int d, Time s, Time e) : Appointment(des, s, e)
     {
         day = d;
     }

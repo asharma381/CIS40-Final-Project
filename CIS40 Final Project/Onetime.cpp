@@ -11,5 +11,5 @@
 
 bool Onetime::occurs_on(int m, int d, int y)
 {
-    return date.equals(Date(m,d,y));
+    return date == Date(m, d, y);
 }
