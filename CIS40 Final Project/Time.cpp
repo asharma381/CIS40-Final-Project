@@ -24,6 +24,6 @@ bool Time::equals(Time t)
 //************************************************************
 void Time::print()
 {
-    cout << getHour() << ":" << getMinute() << ":" << getSecond() << endl;
+    cout << getHour() << ":" << getMinute() << ":" << getSecond();
 }
 

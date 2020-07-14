@@ -6,4 +6,17 @@
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+#include "Appointment.h"
+
+//************************************************************
+// Print Function: Prints the appointment.                   *
+//************************************************************
+void Appointment::print()
+{
+    cout << "Appointment from ";
+    start->print();
+    cout << " to ";
+    end->print();
+    cout << endl;
+}
