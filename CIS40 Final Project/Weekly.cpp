@@ -6,4 +6,19 @@
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+#include "Weekly.h"
+
+enum Week
+{
+    Monday = 1, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+};
+
+//************************************************************
+// Override occurs_on Function: Returns true if the day of   *
+// the week is the same as appointment date.                 *
+//************************************************************
+bool Weekly::occurs_on (int m, int d, int y){
+    return day == d;
+    
+}

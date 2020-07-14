@@ -6,4 +6,14 @@
 //  Copyright © 2020 Aditya Sharma. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+#include "Daily.h"
+
+//************************************************************
+// Override occurs_on Function: Returns true since each day  *
+// there is an appointment.                                  *
+//************************************************************
+bool Appointment::occurs_on(int month, int day, int year)
+{
+    return true;
+}

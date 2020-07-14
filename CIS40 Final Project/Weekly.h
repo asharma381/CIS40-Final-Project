@@ -9,5 +9,27 @@
 #ifndef Weekly_h
 #define Weekly_h
 
+#include "Appointment.h"
+#include "Time.h"
+
+class Weekly: public Appointment
+{
+private:
+    int day;
+public:
+    // Default Constructor
+    Weekly() : Appointment()
+    {
+        day = 0;
+    }
+    
+    // Constructor
+    Weekly(string des, Time s, Time e, int d): Appointment(des, s, e)
+    {
+        day = d;
+    }
+    
+    bool occurs_on(int, int, int) override;
+};
 
 #endif /* Weekly_h */

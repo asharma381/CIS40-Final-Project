@@ -8,6 +8,23 @@
 
 #ifndef Daily_h
 #define Daily_h
+#include "Appointment.h"
+#include "Time.h"
+#include <string>
 
+class Daily: public Appointment
+{
+public:
+    // Default Constructor
+    Daily() : Appointment(){
+        
+    }
+    
+    // Constructor
+    Daily(string des, Time s, Time e): Appointment(des, s, e){ }
+    
+    bool occurs_on(int, int, int) override;
+
+};
 
 #endif /* Daily_h */

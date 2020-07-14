@@ -17,7 +17,7 @@ using namespace std;
 
 class Appointment
 {
-private:
+protected:
     string description;    // Member variable holds the description
     Time start;
     Time end;
@@ -37,7 +37,7 @@ public:
     void print();
     
     // Virtual Function
-//    virtual bool occurs_on(int, int, int);
+    virtual bool occurs_on(int, int, int);
 };
 
 
