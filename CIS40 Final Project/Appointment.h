@@ -38,6 +38,22 @@ public:
     
     // Virtual Function
     virtual bool occurs_on(int, int, int) = 0;
+    virtual void save(ofstream file) = 0;
+    
+    virtual string getClassName();
+    
+    string getDescription() {
+        return description;
+        
+    }
+    
+    Time getStartTime(){
+        return start;
+    }
+    
+    Time getEndTime(){
+        return end;
+    }
 };
 
 

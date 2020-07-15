@@ -8,6 +8,8 @@
 
 #include <iostream>
 #include <vector>
+#include <fstream>
+#include<cstdio>
 
 #include "Date.h"
 #include "Time.h"
@@ -44,6 +46,54 @@ int main() {
             list[i]->print();
     }
     
+    int num;
+    cout << "Enter 0) Exit" << endl << "1) Save Data to a file?" << endl << "2) Load Data from a file" << endl;
+    cin >> num;
     
+    if(num == 1){
+        // SAVE DATA TO FILE
+        ofstream file;
+        file.open("data.txt");
+        
+        // DAILY
+
+        for(int i = 0; i < list.size(); i++)
+        {
+            file << list[i]->getClassName() << " "
+                 << list[i]->getDescription() << " # "
+                 << list[i]->getStartTime().getHour() << " "
+                 << list[i]->getStartTime().getMinute() << " "
+                 << list[i]->getStartTime().getSecond() << " "
+                 << list[i]->getEndTime().getHour() << " "
+                 << list[i]->getEndTime().getMinute() << " "
+                 << list[i]->getEndTime().getSecond();
+            if(list[i]->getClassName() == "Weekly")
+            {
+                file << " " << (static_cast<Weekly*>(list[i]))->getDay() << endl;
+            }else if(list[i]->getClassName() == "Monthly")
+            {
+                file << " " << (static_cast<Monthly*>(list[i]))->getDay() << endl;
+            }else if(list[i]->getClassName() == "Onetime")
+            {
+                file << " " << (static_cast<Onetime*>(list[i]))->getDate().getMonth()
+                << " " << (static_cast<Onetime*>(list[i]))->getDate().getDay()
+                << " " << (static_cast<Onetime*>(list[i]))->getDate().getYear() << endl;
+            }else
+            {
+                file << endl;
+            }
+        }
+        file.close();
+        
+        // WEEKLY: ADD DAY
+        // MONTHLY: ADD DAY
+        // ONETIME: ADD DATE
+        
+            // Daily DES HR MIN SEC HR MIN SEC
+        
+    }
+    else if(num == 2){
+        /// Load Data
+    }
     return 0;
 }

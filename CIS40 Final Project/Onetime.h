@@ -23,6 +23,9 @@ public:
     Onetime(string des, Date d, Time s, Time e) : Appointment(des, s, e), date(d) {}
     
     bool occurs_on(int, int, int) override;
+    string getClassName() override;
+    void save(ofstream file) override;
+    Date getDate();
 };
 
 #endif /* Onetime_h */

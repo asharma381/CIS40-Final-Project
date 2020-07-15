@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "Monthly.h"
 
 //************************************************************
@@ -15,5 +16,15 @@
 //************************************************************
 bool Monthly::occurs_on (int m, int d, int y){
     return day == d;
+    
+}
+
+string Monthly::getClassName()
+{
+    return "Monthly";
+}
+
+void Monthly::save(ofstream file)
+{
     
 }

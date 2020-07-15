@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "Weekly.h"
 
 enum Week
@@ -20,5 +21,13 @@ enum Week
 //************************************************************
 bool Weekly::occurs_on (int m, int d, int y){
     return day == d;
+}
+
+string Weekly::getClassName(){
+    return "Weekly";
+}
+
+void Weekly::save(ofstream file)
+{
     
 }

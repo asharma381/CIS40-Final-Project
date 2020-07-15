@@ -30,6 +30,9 @@ public:
     }
     
     bool occurs_on(int, int, int) override;
+    void save(ofstream file) override;
+    string getClassName() override;
+    int getDay() {return day;}
 };
 
 #endif /* Weekly_h */

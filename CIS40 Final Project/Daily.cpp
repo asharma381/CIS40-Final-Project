@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "Daily.h"
 
 //************************************************************
@@ -16,4 +17,14 @@
 bool Daily::occurs_on (int m, int d, int y)
 {
     return true;
+}
+
+string Daily::getClassName()
+{
+    return "Daily";
+}
+
+void Daily::save(ofstream file)
+{
+    
 }

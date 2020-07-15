@@ -19,3 +19,7 @@ void Appointment::print()
     end.print();
     cout << " - " << description << endl;
 }
+
+string Appointment::getClassName(){
+    return "Appointment";
+}
