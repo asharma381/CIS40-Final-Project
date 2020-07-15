@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <sstream>
 #include "Daily.h"
 
 //************************************************************
@@ -33,3 +34,55 @@ string Daily::save()
 // ONETIME: ADD DATE
 
     // Daily DES HR MIN SEC HR MIN SEC
+
+// EXAMPLE DATA: brush my teeth # 8 0 0 8 5 0
+
+void Daily::load(string data)
+{
+    string des = data.substr(0,data.find("#"));
+    description = des; // init the description
+    
+    string rest = data.substr(data.find("#") + 2);
+    
+    // Start Hour
+    stringstream startHr(rest.substr(0,rest.find(" ")));
+    int sh = 0;
+    startHr >> sh;
+    rest = rest.substr(rest.find(" ") + 1);
+    
+    // Start Minute
+    stringstream startMin(rest.substr(0,rest.find(" ")));
+    int sm = 0;
+    startMin >> sm;
+    rest = rest.substr(rest.find(" ") + 1);
+
+    // Start Second
+    stringstream startSec(rest.substr(0,rest.find(" ")));
+    int ss = 0;
+    startSec >> ss;
+    rest = rest.substr(rest.find(" ") + 1);
+    
+    
+    // End Hour
+    stringstream endHr(rest.substr(0,rest.find(" ")));
+    int eh = 0;
+    endHr >> eh;
+    rest = rest.substr(rest.find(" ") + 1);
+    
+    // End Minute
+    stringstream endMin(rest.substr(0,rest.find(" ")));
+    int em = 0;
+    endMin >> em;
+    rest = rest.substr(rest.find(" ") + 1);
+    
+    // End Second
+    stringstream endSec(rest.substr(0,rest.find(" ")));
+    int es = 0;
+    endSec >> es;
+    
+    
+    //cout << sh << " " << sm << " " << ss << " " << eh << " " << em << " " << es << " ";
+    start = Time(sh, sm, ss);
+    end = Time(eh, em, es);
+    
+}

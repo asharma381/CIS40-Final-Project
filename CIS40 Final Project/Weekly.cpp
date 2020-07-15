@@ -31,3 +31,8 @@ string Weekly::save()
     return getClassName() + " " + getDescription() + " # " + to_string(getStartTime().getHour()) + " " + to_string(getStartTime().getMinute()) + " " + to_string(getStartTime().getSecond()) + " " + to_string(getEndTime().getHour()) + " " + to_string(getEndTime().getMinute()) + " " + to_string(getEndTime().getSecond()) + " " + to_string(getDay());
 
 }
+
+void Weekly::load(string data)
+{
+    
+}

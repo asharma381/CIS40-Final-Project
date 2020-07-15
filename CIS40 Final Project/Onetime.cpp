@@ -29,3 +29,7 @@ string Onetime::save()
     return getClassName() + " " + getDescription() + " # " + to_string(getStartTime().getHour()) + " " + to_string(getStartTime().getMinute()) + " " + to_string(getStartTime().getSecond()) + " " + to_string(getEndTime().getHour()) + " " + to_string(getEndTime().getMinute()) + " " + to_string(getEndTime().getSecond()) + " " + to_string(getDate().getMonth()) + " " + to_string(getDate().getDay()) + " " + to_string(getDate().getYear());
 }
 
+void Onetime::load(string data)
+{
+    
+}

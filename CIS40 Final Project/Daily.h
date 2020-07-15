@@ -27,6 +27,7 @@ public:
     bool occurs_on(int, int, int) override;
     string save() override;
     string getClassName() override;
+    void load(string) override;
 
 };
 

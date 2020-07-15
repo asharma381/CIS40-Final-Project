@@ -65,7 +65,48 @@ int main() {
         
     }
     else if(num == 2){
-        /// Load Data
+        // Load Data
+        fstream file;
+        file.open("data.txt", ios::in);
+        if(!file){
+            cout << "Error Loading File" << endl;
+            return 0;
+        }
+        while(file.peek() != EOF)
+        {
+            string currLine;
+    //        file >> line;
+            getline(file, currLine);
+//            cout << currLine << endl;
+            string className = currLine.substr(0, currLine.find(" "));
+            string data = currLine.substr(currLine.find(" ") + 1);
+                if(className == "Daily"){
+                    Daily *d = new Daily();
+                    list.push_back(d);
+                    d->load(data);
+                    d->print();
+                    //cout << className << endl << data << endl;
+                }
+                else if(className == "Weekly"){
+                    Weekly *w = new Weekly();
+                    list.push_back(w);
+                    w->load(data);
+                    //cout << className << endl << data << endl;
+                }
+                else if(className == "Monthly"){
+                    Monthly *m = new Monthly();
+                    list.push_back(m);
+                    m->load(data);
+                    //cout << className << endl << data << endl;
+                }
+                else if(className == "Onetime"){
+                    Onetime *o = new Onetime();
+                    list.push_back(o);
+                    o->load(data);
+                    //cout << className << endl << data << endl;
+                }
+        }
+        file.close();
     }
     return 0;
 }

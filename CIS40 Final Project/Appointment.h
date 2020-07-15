@@ -39,6 +39,7 @@ public:
     // Virtual Function
     virtual bool occurs_on(int, int, int) = 0;
     virtual string save() = 0;
+    virtual void load(string) = 0;
     
     virtual string getClassName();
     
