@@ -28,6 +28,7 @@ public:
     string save() override;
     Date getDate();
     void load(string) override;
+    void read() override;
 };
 
 #endif /* Onetime_h */

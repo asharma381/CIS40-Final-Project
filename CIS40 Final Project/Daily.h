@@ -28,6 +28,7 @@ public:
     string save() override;
     string getClassName() override;
     void load(string) override;
+    void read() override;
 
 };
 

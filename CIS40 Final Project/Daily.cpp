@@ -80,9 +80,11 @@ void Daily::load(string data)
     int es = 0;
     endSec >> es;
     
-    
-    //cout << sh << " " << sm << " " << ss << " " << eh << " " << em << " " << es << " ";
     start = Time(sh, sm, ss);
     end = Time(eh, em, es);
-    
+}
+
+void Daily::read()
+{
+    /// READ DATA
 }

@@ -24,6 +24,3 @@ string Appointment::getClassName(){
     return "Appointment";
 }
 
-//string Appointment::save()
-//{
-//}

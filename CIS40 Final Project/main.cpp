@@ -47,9 +47,21 @@ int main() {
     }
     
     int num;
-    cout << "Enter 0) Exit" << endl << "1) Save Data to a file?" << endl << "2) Load Data from a file" << endl;
+    cout << "Enter " << endl << "0) Add an Appointment" << endl << "1) Save Data to a file." << endl << "2) Load Data from a file." << endl << "3) EXIT";
     cin >> num;
     
+    if(num == 0){
+        string type = "";
+        cout << "Enter the type of appointment (Daily, Weekly, Monthly, Onetime): ";
+        cin >> type;
+        
+        if(type == "Daily"){
+            Daily *d = new Daily();
+            list.push_back(d);
+            d->read();
+        }
+        
+    }
     if(num == 1){
         // SAVE DATA TO FILE
         ofstream file;
@@ -85,25 +97,24 @@ int main() {
                     list.push_back(d);
                     d->load(data);
                     d->print();
-                    //cout << className << endl << data << endl;
                 }
                 else if(className == "Weekly"){
                     Weekly *w = new Weekly();
                     list.push_back(w);
                     w->load(data);
-                    //cout << className << endl << data << endl;
+                    w->print();
                 }
                 else if(className == "Monthly"){
                     Monthly *m = new Monthly();
                     list.push_back(m);
                     m->load(data);
-                    //cout << className << endl << data << endl;
+                    m->print();
                 }
                 else if(className == "Onetime"){
                     Onetime *o = new Onetime();
                     list.push_back(o);
                     o->load(data);
-                    //cout << className << endl << data << endl;
+                    o->print();
                 }
         }
         file.close();

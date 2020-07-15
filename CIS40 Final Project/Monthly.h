@@ -30,6 +30,7 @@ public:
     string getClassName() override;
     int getDay() { return day;}
     void load(string) override;
+    void read() override;
 };
 
 #endif /* Monthly_h */
