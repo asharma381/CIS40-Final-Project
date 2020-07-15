@@ -99,4 +99,10 @@ void Onetime::load(string data)
 void Onetime::read()
 {
     /// READ DATA
+    Appointment::read();
+    cout << "Enter day: ";
+    cout << "Enter date_month date_day date_year:";
+    int dm, dd, dy;
+    cin >> dm >> dd >> dy;
+    date = Date(dm, dd, dy);
 }

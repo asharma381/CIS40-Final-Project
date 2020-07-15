@@ -87,4 +87,9 @@ void Monthly::load(string data)
 void Monthly::read()
 {
     /// READ DATA
+    Appointment::read();
+    cout << "Enter day: ";
+    int d;
+    cin >> d;
+    day = d;
 }

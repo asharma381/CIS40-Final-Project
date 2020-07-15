@@ -24,3 +24,23 @@ string Appointment::getClassName(){
     return "Appointment";
 }
 
+void Appointment::read(){
+    int sh;
+    int sm;
+    int ss;
+    int eh;
+    int em;
+    int es;
+
+    cout << "Enter start_hours start_mins start_second end_hours end_mins end_second descript:"
+
+          << endl;
+
+    cin >> sh >> sm >> ss >> eh >> em >> es;
+
+    getline(cin, description);
+
+    start = Time(sh, sm, ss);
+
+    end = Time(eh, em, es);
+}

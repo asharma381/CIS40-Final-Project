@@ -84,7 +84,3 @@ void Daily::load(string data)
     end = Time(eh, em, es);
 }
 
-void Daily::read()
-{
-    /// READ DATA
-}

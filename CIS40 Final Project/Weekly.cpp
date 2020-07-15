@@ -91,4 +91,9 @@ void Weekly::load(string data)
 void Weekly::read()
 {
     /// READ DATA
+    Appointment::read();
+    cout << "Enter day: ";
+    int d;
+    cin >> d;
+    day = d;
 }

@@ -59,6 +59,22 @@ int main() {
             Daily *d = new Daily();
             list.push_back(d);
             d->read();
+            d->print();
+        }else if(type == "Weekly"){
+            Weekly *w = new Weekly();
+            list.push_back(w);
+            w->read();
+            w->print();
+        }else if(type == "Monthly"){
+            Monthly *m = new Monthly();
+            list.push_back(m);
+            m->read();
+            m->print();
+        }else if(type == "Onetime"){
+            Onetime *o = new Onetime();
+            list.push_back(o);
+            o->read();
+            o->print();
         }
         
     }
