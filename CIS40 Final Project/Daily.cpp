@@ -7,7 +7,6 @@
 //
 
 #include <iostream>
-#include <fstream>
 #include "Daily.h"
 
 //************************************************************
@@ -24,7 +23,13 @@ string Daily::getClassName()
     return "Daily";
 }
 
-void Daily::save(ofstream file)
+string Daily::save()
 {
-    
+    return getClassName() + " " + getDescription() + " # " + to_string(getStartTime().getHour()) + " " + to_string(getStartTime().getMinute()) + " " + to_string(getStartTime().getSecond()) + " " + to_string(getEndTime().getHour()) + " " + to_string(getEndTime().getMinute()) + " " + to_string(getEndTime().getSecond());
 }
+
+// WEEKLY: ADD DAY
+// MONTHLY: ADD DAY
+// ONETIME: ADD DATE
+
+    // Daily DES HR MIN SEC HR MIN SEC

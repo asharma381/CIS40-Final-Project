@@ -38,7 +38,7 @@ public:
     
     // Virtual Function
     virtual bool occurs_on(int, int, int) = 0;
-    virtual void save(ofstream file) = 0;
+    virtual string save() = 0;
     
     virtual string getClassName();
     

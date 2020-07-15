@@ -55,41 +55,13 @@ int main() {
         ofstream file;
         file.open("data.txt");
         
-        // DAILY
-
+        // Polymorphic Behavior Established
         for(int i = 0; i < list.size(); i++)
         {
-            file << list[i]->getClassName() << " "
-                 << list[i]->getDescription() << " # "
-                 << list[i]->getStartTime().getHour() << " "
-                 << list[i]->getStartTime().getMinute() << " "
-                 << list[i]->getStartTime().getSecond() << " "
-                 << list[i]->getEndTime().getHour() << " "
-                 << list[i]->getEndTime().getMinute() << " "
-                 << list[i]->getEndTime().getSecond();
-            if(list[i]->getClassName() == "Weekly")
-            {
-                file << " " << (static_cast<Weekly*>(list[i]))->getDay() << endl;
-            }else if(list[i]->getClassName() == "Monthly")
-            {
-                file << " " << (static_cast<Monthly*>(list[i]))->getDay() << endl;
-            }else if(list[i]->getClassName() == "Onetime")
-            {
-                file << " " << (static_cast<Onetime*>(list[i]))->getDate().getMonth()
-                << " " << (static_cast<Onetime*>(list[i]))->getDate().getDay()
-                << " " << (static_cast<Onetime*>(list[i]))->getDate().getYear() << endl;
-            }else
-            {
-                file << endl;
-            }
+            string data = list[i]->save();
+            file << data << endl;
         }
         file.close();
-        
-        // WEEKLY: ADD DAY
-        // MONTHLY: ADD DAY
-        // ONETIME: ADD DATE
-        
-            // Daily DES HR MIN SEC HR MIN SEC
         
     }
     else if(num == 2){

@@ -24,7 +24,7 @@ public:
     
     bool occurs_on(int, int, int) override;
     string getClassName() override;
-    void save(ofstream file) override;
+    string save() override;
     Date getDate();
 };
 
